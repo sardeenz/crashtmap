@@ -45,14 +45,15 @@ get '/crashtweets' do
 TweetStream.configure do |config|
   config.consumer_key       = 'O9wsZfidXPUtnNB21HCxrrXEq'
   config.consumer_secret    = 'j9njg9Leu935sbipDz8jklPNfi7ipdV3DyKRLb2xBSwErv4vEp'
-  config.oauth_token        = 'abcdefghijklmnopqrstuvwxyz'
-  config.oauth_token_secret = '0123456789'
+  config.oauth_token        = '7374632-D07EYGE0IkClZj7ub9g2opd4l53MCaQuM61WuJfz6T'
+  config.oauth_token_secret = 'tqd0MN5tb81lID9v8izSCEA77RnzMsg6uiE24qBKlfX3j'
   config.auth_method        = :oauth
 end
 
 # Use 'follow' to follow a group of user ids (integers, not screen names)
-TweetStream::Client.new.follow(7374632) do |status|
+TweetStream::Client.new.follow(20647123, 7374632) do |status|
   puts "#{status.text}"
+  puts "chad"
 end
 # This will pull a sample of all tweets based on
 # your Twitter account's Streaming API role.
@@ -60,6 +61,7 @@ TweetStream::Client.new.sample do |status|
   # The status object is a special Hash with
   # method access to its keys.
   puts "#{status.text}"
+  puts "carla"
 end
 end
 
